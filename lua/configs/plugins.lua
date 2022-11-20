@@ -15,8 +15,11 @@ packer.startup(function()
 	use("saadparwaiz1/cmp_luasnip")
 	-- Formatting
 	use("jose-elias-alvarez/null-ls.nvim")
+
+  use("MunifTanjim/prettier.nvim")
 	-- Language servers
 	use("neovim/nvim-lspconfig")
+  use("glepnir/lspsaga.nvim")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 	use("simrat39/rust-tools.nvim")
@@ -36,6 +39,7 @@ packer.startup(function()
 	use("MunifTanjim/nui.nvim")
 	-- Finder
 	use("nvim-telescope/telescope.nvim")
+  use("preservim/nerdtree")
 	-- Interface
 	use("akinsho/bufferline.nvim")
 	--use({ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" })

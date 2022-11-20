@@ -11,7 +11,12 @@ vim.g.mapleader = " "
 -- Vim
 --map("n", "<F5>", ":Neotree toggle<CR>", opts)
 
-map("n", "<C-q>", ":q!<CR>", opts)
+
+-- NERDTreeToggle
+map("n", "<F5>", ":NERDTreeToggle<CR>", opts)
+-- NERDTree 
+--
+map("n", "<C-q>", ":q!<CR>", opts) -- Force quit
 map("n", "<F4>", ":bd<CR>", opts)
 map("n", "<F6>", ":sp<CR>:terminal<CR>", opts)
 map("n", "<S-Tab>", "gT", opts)
@@ -19,7 +24,7 @@ map("n", "<Tab>", "gt", opts)
 map("n", "<silent> <Tab>", ":tabnew<CR>", opts)
 map("n", "<F12>", ":TSHighlightCapturesUnderCursor<CR>", opts)
 map("n", "<C-p>", ':lua require("telescope.builtin").find_files()<CR>', opts)
- 
+map("n", "<C-x>", ":wq<CR>", opts) --Save and force quit
 
 -- Diagnostics
 kmap("n", "<space>e", vim.diagnostic.open_float, opts)
@@ -53,6 +58,6 @@ end
 ---------------------------------
 -- Auto commands
 ---------------------------------
-vim.cmd([[ autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync() ]])
+vim.cmd([[ autocmd BufWritePre <buffer> lua vim.lsp.buf.format() ]])
 vim.cmd([[ autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 vim.cmd([[ autocmd FileType php setl textwidth=120 softtabstop=4 shiftwidth=4 tabstop=4 colorcolumn=120]])

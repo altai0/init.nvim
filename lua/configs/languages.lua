@@ -7,6 +7,7 @@ local no_format = function(client, bufnr)
 	client.server_capabilities.document_formatting = false
 end
 
+
 -- Capabilities
 caps.textDocument.completion.completionItem.snippetSupport = true
 

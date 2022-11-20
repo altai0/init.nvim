@@ -11,3 +11,7 @@ require("configs.formatting")
 require("configs.keymaps")
 require("configs.theming")
 
+
+
+
+-- NERDTree added
