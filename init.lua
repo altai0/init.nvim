@@ -10,3 +10,4 @@ require("configs.languages")
 require("configs.formatting")
 require("configs.keymaps")
 require("configs.theming")
+

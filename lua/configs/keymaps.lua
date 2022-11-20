@@ -9,7 +9,8 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 -- Vim
-map("n", "<F5>", ":Neotree toggle<CR>", opts)
+--map("n", "<F5>", ":Neotree toggle<CR>", opts)
+
 map("n", "<C-q>", ":q!<CR>", opts)
 map("n", "<F4>", ":bd<CR>", opts)
 map("n", "<F6>", ":sp<CR>:terminal<CR>", opts)
@@ -18,6 +19,7 @@ map("n", "<Tab>", "gt", opts)
 map("n", "<silent> <Tab>", ":tabnew<CR>", opts)
 map("n", "<F12>", ":TSHighlightCapturesUnderCursor<CR>", opts)
 map("n", "<C-p>", ':lua require("telescope.builtin").find_files()<CR>', opts)
+ 
 
 -- Diagnostics
 kmap("n", "<space>e", vim.diagnostic.open_float, opts)

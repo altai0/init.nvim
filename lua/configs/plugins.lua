@@ -38,7 +38,7 @@ packer.startup(function()
 	use("nvim-telescope/telescope.nvim")
 	-- Interface
 	use("akinsho/bufferline.nvim")
-	use({ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" })
+	--use({ "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" })
 	use("nvim-lualine/lualine.nvim")
 	use('elvessousa/sobrio')
 end)
@@ -66,19 +66,4 @@ require("bufferline").setup()
 -- Lualine
 require("lualine").setup()
 
--- Neo tree
-require("neo-tree").setup({
-	-- Close Neo-tree if it is the last window left in the tab
-	close_if_last_window = false,
-	enable_diagnostics = true,
-	enable_git_status = true,
-	popup_border_style = "rounded",
-	sort_case_insensitive = false,
-	filesystem = {
-		filtered_items = {
-			hide_dotfiles = false,
-			hide_gitignored = false,
-		},
-	},
-	window = { width = 30 },
-})
+
